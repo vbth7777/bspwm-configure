@@ -13,11 +13,11 @@
 # Set bspwm configuration for Isabel
 set_bspwm_config() {
 	bspc config border_width 0
-	bspc config top_padding 42
+	bspc config top_padding 40
 	# bspc config bottom_padding 42
-	bspc config bottom_padding 2
-	bspc config left_padding 2
-	bspc config right_padding 2
+	bspc config bottom_padding 0
+	bspc config left_padding 0
+	bspc config right_padding 0
 	bspc config normal_border_color "#b8bfe5"
 	bspc config active_border_color "#b8bfe5"
 	bspc config focused_border_color "#7560d3"
