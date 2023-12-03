@@ -67,7 +67,7 @@ super + shift + alt + t
 # 	feh -z --no-fehbg --bg-fill ~/.config/bspwm/rices/$RICETHEME/walls/
 
 # Screenshot Now
-Print
+super + Print
 	ScreenShoTer --now
 
 # Screenshot Select
