@@ -79,6 +79,7 @@ bspc config merge_overlapping_monitors true
 
 #bspc wm --adopt-orphans
 bspc rule -a scratch sticky=on state=floating focus=on
+bspc rule -a feh sticky=on state=floating focus=on
 bspc rule -a iwgtk state=floating
 
 #  ╔═╗╦ ╦╔╦╗╔═╗╔═╗╔╦╗╔═╗╦═╗╔╦╗
