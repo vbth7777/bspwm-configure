@@ -107,9 +107,12 @@ pidof -q picom || { picom --config "$HOME"/.config/bspwm/picom.conf & }
 #pidof -q picom || { picom --legacy-backends --config "$HOME"/.config/bspwm/picom.conf & }
 
 # Set random wallpaper for actual rice
-feh -z --no-fehbg --bg-fill ${rice_dir}/walls
-
+# while true ; do
+# 	feh --randomize --bg-fill ${rice_dir}/walls
+# 	sleep 5
+# done &
 # Launch eww daemon
+	feh --randomize --bg-fill ${rice_dir}/walls
 pidof -q eww || { eww -c "$HOME"/.config/bspwm/eww daemon & }
 
 # Reload sxhkd daemon
@@ -126,3 +129,8 @@ pidof -q polkit-gnome-authentication-agent-1 || { /usr/lib/polkit-gnome/polkit-g
 
 # Fix cursor
 xsetroot -cursor_name left_ptr
+
+nm-applet &
+blueberry-tray &
+greenclip daemon &
+
