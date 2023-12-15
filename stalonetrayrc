@@ -1,8 +1,8 @@
-background "#14171C"
+background "#1A1B26"
 vertical qrue
-geometry 1x1-103+837
-grow_gravity SE
-icon_gravity SE
+geometry 1x1-113+52
+grow_gravity NE
+icon_gravity NE
 icon_size 18
 slot_size 27
 kludges force_icons_size
