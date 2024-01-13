@@ -15,10 +15,10 @@ consequences=$4
 			[ "$state" ] || echo "state=floating center=on"
 			;;
 		Updating)
-			eval "$consequences"
-			[ "$state" ] || echo "state=floating sticky=on center=on"
-			;;
-		mpv)
+		# 	eval "$consequences"
+		# 	[ "$state" ] || echo "state=floating sticky=on center=on"
+		# 	;;
+		# mpv)
 			eval "$consequences"
 			[ "$state" ] || echo "state=floating focus=on rectangle=849x477+0+0 center=on"
 			;;
