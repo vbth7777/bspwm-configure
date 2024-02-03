@@ -16,6 +16,9 @@ export RICETHEME
 PATH="$HOME/.config/bspwm/scripts:$PATH"
 rice_dir="$HOME/.config/bspwm/rices/$RICETHEME"
 
+export KWIN_X11_NO_SYNC_TO_VBLANK=1
+export KWIN_X11_REFRESH_RATE=144000
+
 ## Fix java applications
 export _JAVA_AWT_WM_NONREPARENTING=1
 
