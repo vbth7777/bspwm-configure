@@ -11,7 +11,7 @@
 #	- z0mbi3.zk@protonmail.com
 #
 
-read -r RICETHEME < "$HOME"/.config/bspwm/.rice
+read -r RICETHEME < $HOME/.config/bspwm/.rice
 export RICETHEME
 PATH="$HOME/.config/bspwm/scripts:$PATH"
 rice_dir="$HOME/.config/bspwm/rices/$RICETHEME"
@@ -38,7 +38,7 @@ export _JAVA_AWT_WM_NONREPARENTING=1
 #  ╠╩╗╚═╗╠═╝║║║║║║  ║  ║ ║║║║╠╣ ║║ ╦
 #  ╚═╝╚═╝╩  ╚╩╝╩ ╩  ╚═╝╚═╝╝╚╝╚  ╩╚═╝
 
-bspc config external_rules_command "$HOME"/.config/bspwm/scripts/ExternalRules
+bspc config external_rules_command $HOME/.config/bspwm/scripts/ExternalRules
 
 bspc config window_gap					6
 bspc config split_ratio					0.51
@@ -106,8 +106,8 @@ processes=("eww.*bar" "polybar" "sxhkd" "dunst" "stalonetray")
 
 # Launch picom // If you have old hardware or encounter problems 
 # uncomment the picom "--legacy-backends" line and comment the current one.
-pidof -q picom || { picom --config "$HOME"/.config/bspwm/picom.conf --no-vsync & }
-#pidof -q picom || { picom --legacy-backends --config "$HOME"/.config/bspwm/picom.conf & }
+pidof -q picom || { picom --config $HOME/.config/bspwm/picom.conf --no-vsync & }
+#pidof -q picom || { picom --legacy-backends --config $HOME/.config/bspwm/picom.conf & }
 
 # Set random wallpaper for actual rice
 # while true ; do
@@ -116,16 +116,16 @@ pidof -q picom || { picom --config "$HOME"/.config/bspwm/picom.conf --no-vsync &
 # done &
 # Launch eww daemon
 	feh --randomize --bg-fill ${rice_dir}/walls
-pidof -q eww || { eww -c "$HOME"/.config/bspwm/eww daemon & }
+pidof -q eww || { eww -c $HOME/.config/bspwm/eww daemon & }
 
 # Reload sxhkd daemon
-sxhkd -c "$HOME"/.config/bspwm/sxhkdrc &
+sxhkd -c $HOME/.config/bspwm/sxhkdrc &
 
 # Launch dunst notification daemon
-dunst -config "$HOME"/.config/bspwm/dunstrc &
+dunst -config $HOME/.config/bspwm/dunstrc &
 
 # Launch stalonetray
-[[ "$RICETHEME" != "z0mbi3" ]] && stalonetray -c "$HOME"/.config/bspwm/stalonetrayrc & sleep 0.1 && xdo hide -N stalonetray && touch "/tmp/syshide.lock"
+[[ "$RICETHEME" != "z0mbi3" ]] && stalonetray -c $HOME/.config/bspwm/stalonetrayrc & sleep 0.1 && xdo hide -N stalonetray && touch "/tmp/syshide.lock"
 
 # Launch polkit
 pidof -q polkit-gnome-authentication-agent-1 || { /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 & }
