@@ -85,6 +85,7 @@ bspc rule -a scratch sticky=on state=floating focus=on
 bspc rule -a feh sticky=on state=floating focus=on
 bspc rule -a iwgtk state=floating
 bspc rule -a mpv desktop=^7
+bspc rule -a Localsend_app desktop=^6 state=tiled
 
 #  ╔═╗╦ ╦╔╦╗╔═╗╔═╗╔╦╗╔═╗╦═╗╔╦╗
 #  ╠═╣║ ║ ║ ║ ║╚═╗ ║ ╠═╣╠╦╝ ║ 
@@ -139,6 +140,8 @@ blueberry-tray &
 node  ~/.config/local-server/local-cloudflare-api/index.js&
 npm run --prefix ~/Downloads/Projects/surfingkeys-conf gulp serve&
 greenclip daemon &
+pkill localsend
+localsend&
 
 #Git pull
 cd ~/.config/nvim && git pull
