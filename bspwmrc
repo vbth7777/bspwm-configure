@@ -135,6 +135,9 @@ pidof -q polkit-gnome-authentication-agent-1 || { /usr/lib/polkit-gnome/polkit-g
 # Fix cursor
 xsetroot -cursor_name left_ptr
 
+#Launch terminal
+alacritty &
+
 nm-applet &
 blueberry-tray &
 node  ~/.config/local-server/local-cloudflare-api/index.js&
