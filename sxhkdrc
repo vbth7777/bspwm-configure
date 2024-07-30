@@ -165,7 +165,7 @@ super + y
 
 # quit/restart bspwm
 super + alt + {q,r}
-	bspc {quit,wm -r}
+	kill $RANDOM_WALLPAPER_PID;bspc {quit,wm -r}
 
 # close and kill
 super + {_,shift + }w

@@ -85,7 +85,7 @@ bspc rule -a scratch sticky=on state=floating focus=on
 bspc rule -a feh sticky=on state=floating focus=on
 bspc rule -a iwgtk state=floating
 bspc rule -a mpv desktop=^7
-bspc rule -a Localsend_app desktop=^6 state=tiled
+bspc rule -a Localsend desktop=^6 state=tiled
 
 #  ╔═╗╦ ╦╔╦╗╔═╗╔═╗╔╦╗╔═╗╦═╗╔╦╗
 #  ╠═╣║ ║ ║ ║ ║╚═╗ ║ ╠═╣╠╦╝ ║ 
@@ -112,12 +112,18 @@ pidof -q picom || { picom --config $HOME/.config/bspwm/picom.conf --no-vsync & }
 #pidof -q picom || { picom --legacy-backends --config $HOME/.config/bspwm/picom.conf & }
 
 # Set random wallpaper for actual rice
-# while true ; do
-# 	feh --randomize --bg-fill ${rice_dir}/walls
-# 	sleep 5
-# done &
+function set_random_wallpaper() {
+	while true; do
+		feh --no-fehbg --randomize --bg-fill ${rice_dir}/walls
+		# feh --no-fehbg --randomize --bg-fill ~/.config/wallpapers
+		sleep 5
+	done 
+}
+set_random_wallpaper&
+export RANDOM_WALLPAPER_PID=$!
+
+# feh --randomize --bg-fill ${rice_dir}/walls
 # Launch eww daemon
-	feh --randomize --bg-fill ${rice_dir}/walls
 pidof -q eww || { eww -c $HOME/.config/bspwm/eww daemon & }
 
 # Reload sxhkd daemon
@@ -134,6 +140,9 @@ pidof -q polkit-gnome-authentication-agent-1 || { /usr/lib/polkit-gnome/polkit-g
 
 # Fix cursor
 xsetroot -cursor_name left_ptr
+
+# Setup VMWare 
+vmware-user-suid-wrapper&
 
 #Launch terminal
 alacritty &
