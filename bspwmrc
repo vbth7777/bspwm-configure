@@ -15,8 +15,8 @@ read -r RICETHEME < $HOME/.config/bspwm/.rice
 export RICETHEME
 PATH="$HOME/.config/bspwm/scripts:$PATH"
 rice_dir="$HOME/.config/bspwm/rices/$RICETHEME"
-# export WALLPAPER_DIR=${rice_dir}/walls
-export WALLPAPER_DIR=~/.config/wallpapers
+export WALLPAPER_DIR=${rice_dir}/walls
+# export WALLPAPER_DIR=~/.config/wallpapers
 
 export KWIN_X11_NO_SYNC_TO_VBLANK=1
 export KWIN_X11_REFRESH_RATE=144000
@@ -117,7 +117,6 @@ pidof -q picom || { picom --config $HOME/.config/bspwm/picom.conf --no-vsync & }
 function set_random_wallpaper() {
 	while true; do
 		feh --no-fehbg --randomize --bg-fill $WALLPAPER_DIR
-		# feh --no-fehbg --randomize --bg-fill ~/.config/wallpapers
 		sleep 5
 	done 
 }
