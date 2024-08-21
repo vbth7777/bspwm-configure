@@ -103,7 +103,7 @@ XF86Audio{Next,Prev,Play,Stop}
 
 # open clipboard manage by rofi
 super + v
-	rofi -modi "clipboard:greenclip print" -show clipboard -run-command '{cmd}';xdotool key shift+Insert
+	rofi -modi "clipboard:greenclip print" -show clipboard -run-command '{cmd}' -theme "$HOME"/.config/bspwm/scripts/rofi-themes/Clipboard.rasi;xdotool key shift+Insert
 
 # backlight up
 super + alt + u
@@ -130,7 +130,7 @@ ctrl + space
 	rofi -show drun
 # show rofi run
 alt + space
-	rofi -show run
+	rofi -show run -theme "$HOME"/.config/bspwm/scripts/rofi-themes/Launcher.rasi
 # show rofi run
 super + alt + space
 	rofi -show window
