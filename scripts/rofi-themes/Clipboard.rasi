@@ -55,6 +55,7 @@ inputbar {
 
 prompt {
     enabled:                     true;
+    font: "JetBrainsMono NF 14";
     padding:                     8px 12px;
     border-radius:               8px;
     background-color:            @selected;
@@ -63,6 +64,7 @@ prompt {
 
 textbox-prompt-colon {
     enabled:                     true;
+    font: "JetBrainsMono NF 14";
     padding:                     8px 12.5px 8px 11px;
     border-radius:               8px;
     expand:                      false;
@@ -75,6 +77,7 @@ entry {
     enabled:                     true;
     padding:                     8px 12px;
     border-radius:               8px;
+    font: "JetBrainsMono NF 14";
     background-color:            @background-alt;
     text-color:                  inherit;
     cursor:                      text;
@@ -210,6 +213,7 @@ element-text {
     text-color:                  inherit;
     highlight:                   inherit;
     cursor:                      inherit;
+    font: "JetBrainsMono NF 14";
     vertical-align:              0.5;
     horizontal-align:            0.0;
 }
