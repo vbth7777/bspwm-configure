@@ -24,7 +24,7 @@ export KWIN_X11_REFRESH_RATE=144000
 ## Fix java applications
 export _JAVA_AWT_WM_NONREPARENTING=1
 
-# export NODE_OPTIONS='--no-experimental-require-module'
+export NODE_OPTIONS='--no-experimental-require-module'
 
 #  ╦ ╦╔═╗╦═╗╦╔═╔═╗╔═╗╔═╗╔═╗╔═╗╔═╗
 #  ║║║║ ║╠╦╝╠╩╗╚═╗╠═╝╠═╣║  ║╣ ╚═╗
@@ -153,7 +153,7 @@ alacritty &
 nm-applet &
 blueberry-tray &
 node  ~/.config/local-server/local-cloudflare-api/index.js&
-npm run --prefix ~/Downloads/Projects/surfingkeys-conf gulp serve&
+# npm run --prefix ~/Downloads/Projects/surfingkeys-conf gulp serve&
 greenclip daemon &
 pkill localsend
 localsend&
