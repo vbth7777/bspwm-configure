@@ -165,7 +165,7 @@ super + y
 
 # quit/restart bspwm
 super + alt + {q,r}
-	kill $RANDOM_WALLPAPER_PID;bspc {quit,wm -r}
+	kill $RANDOM_WALLPAPER_PID;bspc {quit,wm -r}; feh --no-fehbg --randomize --bg-fill /home/gener/.config/bspwm/rices/emilia-v18/walls/silver-wolf-honkai-star-rail-thumb.jpg
 
 # close and kill
 super + {_,shift + }w

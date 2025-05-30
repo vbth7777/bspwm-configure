@@ -122,7 +122,8 @@ function set_random_wallpaper() {
 		sleep 5
 	done 
 }
-set_random_wallpaper&
+# set_random_wallpaper&
+feh --no-fehbg --randomize --bg-fill $WALLPAPER_DIR
 export RANDOM_WALLPAPER_PID=$!
 
 # feh --randomize --bg-fill ${rice_dir}/walls
@@ -146,9 +147,6 @@ xsetroot -cursor_name left_ptr
 
 # Setup VMWare 
 vmware-user-suid-wrapper&
-
-#Launch terminal
-alacritty &
 
 nm-applet &
 blueberry-tray &
