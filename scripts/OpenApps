@@ -19,7 +19,7 @@ WIDGET_DIR="$HOME/.config/bspwm/eww"
 			RiceSelector
 			;;
 		--terminal)
-			xfce4-terminal
+			wezterm
 			;;
 		--floating)
 			alacritty --class FloaTerm,Alacritty -o window.dimensions.lines=22 window.dimensions.columns=90
