@@ -844,11 +844,7 @@ install_dependencies
 install_gh0stzk_dependencies
 install_chaotic_dependencies
 install_aur_dependencies
-clone_dotfiles
 
-backup_existing_config
-install_dotfiles
 configure_services
-change_default_shell
 final_prompt
 

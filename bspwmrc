@@ -113,6 +113,7 @@ processes=("eww.*bar" "polybar" "sxhkd" "dunst" "stalonetray")
 # Launch picom // If you have old hardware or encounter problems 
 # uncomment the picom "--legacy-backends" line and comment the current one.
 pidof -q picom || { picom --config $HOME/.config/bspwm/picom.conf --no-vsync & }
+# Hypr&
 #pidof -q picom || { picom --legacy-backends --config $HOME/.config/bspwm/picom.conf & }
 
 # Set random wallpaper for actual rice
@@ -123,8 +124,11 @@ function set_random_wallpaper() {
 	done 
 }
 # set_random_wallpaper&
-feh --no-fehbg --randomize --bg-fill $WALLPAPER_DIR
+# feh --no-fehbg --randomize --bg-fill $WALLPAPER_DIR
+killall -q feh || true
+while true; do feh --bg-fill --randomize "$WALLPAPER_DIR"/*; sleep 900; done &
 export RANDOM_WALLPAPER_PID=$!
+
 
 # feh --randomize --bg-fill ${rice_dir}/walls
 # Launch eww daemon
@@ -147,6 +151,12 @@ xsetroot -cursor_name left_ptr
 
 # Setup VMWare 
 vmware-user-suid-wrapper&
+
+# Check if xfsettingsd exists before trying to run it
+
+if command -v xfsettingsd >/dev/null 2>&1; then
+  xfsettingsd &
+fi
 
 nm-applet &
 blueberry-tray &
